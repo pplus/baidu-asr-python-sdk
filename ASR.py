@@ -164,8 +164,7 @@ class BaiduStt(object):
 
                         dataf = {"format": "wav",
                                  "token": token,
-                                 "len": len(audio),
-                                 "rate": frame_rate,
+                                 "rate": 16000,
                                  "speech": base_data,
                                  "dev_pid": dev_id,
                                  "cuid": 'b0-10-41-92-84-4d',
@@ -218,8 +217,7 @@ class BaiduStt(object):
 
                         dataf = {"format": "wav",
                                  "token": token,
-                                 "len": len(audio),
-                                 "rate": frame_rate,
+                                 "rate": 16000,
                                  "speech": base_data,
                                  "dev_pid": dev_id,
                                  "cuid": 'b0-10-41-92-84-4d',
@@ -269,8 +267,7 @@ class BaiduStt(object):
 
                         dataf = {"format": "wav",
                                  "token": token,
-                                 "len": len(audio),
-                                 "rate": frame_rate,
+                                 "rate": 16000,
                                  "speech": base_data,
                                  "dev_pid": dev_id,
                                  "cuid": 'b0-10-41-92-84-4d',
