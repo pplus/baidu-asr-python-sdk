@@ -149,9 +149,9 @@ class BaiduStt(object):
         file_content = len(f.read())
         a = 0
         for long in file_content:
-            if long % 1024 == 0:
+            if long % 30720 == 0:
                 times = 1
-                timess = int(long) / 1024
+                timess = int(long) / 30720
                 while 1 == 1:
 
                     if times == timess + 1:
@@ -159,7 +159,7 @@ class BaiduStt(object):
                         break
                     else:
                         file = f.read()
-                        file = file[a:times * 1024]
+                        file = file[a:times * 30720]
                         base_data = base64.b64encode(file)
 
                         dataf = {"format": "wav",
@@ -185,9 +185,9 @@ class BaiduStt(object):
                                 else:
                                     texts.append(text)
                                 if a == 0:
-                                    a = 1024
+                                    a = 30720
                                 else:
-                                    a = times * 1024
+                                    a = times * 30720
                                 times += 1
                             else:
                                 info = {'States': 'Error:ResultUnfound', 'Text': None}
@@ -208,12 +208,12 @@ class BaiduStt(object):
                 break
             else:
                 times = 1
-                timess = long / 1024 - long // 1024
+                timess = long / 30720 - long // 30720
                 while 1 == 1:
 
                     if times == timess + 1:
                         file = f.read()
-                        file = file[a:times * 1024]
+                        file = file[a:times * 30720]
                         base_data = base64.b64encode(file)
 
                         dataf = {"format": "wav",
@@ -239,9 +239,9 @@ class BaiduStt(object):
                                 else:
                                     texts.append(text)
                                 if a == 0:
-                                    a = 1024
+                                    a = 30720
                                 else:
-                                    a = times * 1024
+                                    a = times * 30720
                                 times += 1
 
                             else:
@@ -264,7 +264,7 @@ class BaiduStt(object):
                         break
                     else:
                         file = f.read()
-                        file = file[a:times * 1024]
+                        file = file[a:times * 30720]
                         base_data = base64.b64encode(file)
 
                         dataf = {"format": "wav",
@@ -290,9 +290,9 @@ class BaiduStt(object):
                                 else:
                                     texts.append(text)
                                 if a == 0:
-                                    a = 1024
+                                    a = 30720
                                 else:
-                                    a = times * 1024
+                                    a = times * 30720
                                 times += 1
                             else:
                                 info = {'States': 'Error:ResultUnfound', 'Text': None}
